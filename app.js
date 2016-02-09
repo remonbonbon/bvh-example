@@ -1,6 +1,9 @@
 (function() {
 	'use strict';
 
+	// var INPUT_TOPOJSON = 'around-tsukuba-city.topojson';
+	var INPUT_TOPOJSON = 'us-mainland-contries.topojson';
+
 	// Original feature layer
 	var originalLayer = new ol.layer.Vector({
 		source: new ol.source.Vector(),
@@ -163,7 +166,7 @@
 		return node;
 	}
 
-	fetch('around-tsukuba-city.topojson')
+	fetch(INPUT_TOPOJSON)
 	.then(function(res) {return res.json();})
 	.then(function(topojson) {
 		// Create original features
